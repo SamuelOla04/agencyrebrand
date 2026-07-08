@@ -562,7 +562,7 @@
 
             /* Center Hero */
             .hero-content {
-                bottom: 6%;
+                bottom: 18%;
                 left: 0;
                 right: 0;
                 padding: 0 5%;
@@ -588,12 +588,20 @@
 
             /* Adjust Marquee for Mobile */
             .emails-section { padding: 5rem 0; }
-            .marquee-track { gap: 1.5rem; padding-left: 1.5rem; animation: marqueeScrollMobile 25s linear infinite; }
-            .marquee-track img { height: 400px; }
-            
+            .marquee-track {
+                gap: 1.25rem;
+                padding-left: 1.25rem;
+                animation: marqueeScrollMobile 12s linear infinite;
+                will-change: transform;
+            }
+            .marquee-track img {
+                height: 300px;
+                box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+            }
+
             @keyframes marqueeScrollMobile {
                 0% { transform: translateX(0); }
-                100% { transform: translateX(calc(-50% - 0.75rem)); }
+                100% { transform: translateX(calc(-50% - 0.625rem)); }
             }
 
             /* Stack & Center Contact Section */
@@ -728,7 +736,8 @@
                 <p class="contact-detail">SMSCALES<br>Email &amp; Retention Marketing</p>
             </div>
 
-          <form class="contact-form" action="https://formspree.io/f/xrblopzk" method="POST" data-aos="fade-up" data-aos-delay="150">
+            <!-- FORMSPREE -->
+            <form class="contact-form" action="https://formspree.io/f/xrblopzk" method="POST" data-aos="fade-up" data-aos-delay="150">
 
                 <div class="form-field">
                     <label for="name">Name</label>
